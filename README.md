@@ -60,10 +60,6 @@ Context is **trapped** inside each platform. Switch to a new AI? Start from zero
 
 ---
 
-<br/>
-
-
----
 
 <br/>
 

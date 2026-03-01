@@ -1,11 +1,12 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&height=300&color=gradient&customColorList=0,2,4,12,30&text=MemBridge&fontSize=110&fontColor=ffffff&animation=fadeIn&fontAlignY=55&desc=Your%20Memory.%20Every%20AI.%20One%20File.%20%7C%20contextify%20yourself&descAlignY=75&descSize=18&stroke=ffffff&strokeWidth=1" width="100%"/>
-
+<img src="https://capsule-render.vercel.app/api?type=venom&height=300&color=gradient&customColorList=0,2,4,12,30&text=MemBridge&fontSize=110&fontColor=ffffff&animation=fadeIn&fontAlignY=45&desc=Your%20Memory.%20Every%20AI.%20One%20File.%20%7C%20contextify%20yourself&descAlignY=78&descSize=18&stroke=ffffff&strokeWidth=1" width="100%"/>
 <br/>
 
 <p>
-  <img src="https://img.shields.io/badge/STATUS-ACTIVE-00ff88?style=for-the-badge&logo=checkmarx&logoColor=black&labelColor=0d0d0d"/>
+  
+  [![Open Source](https://img.shields.io/badge/Open-Source-brightgreen?style=for-the-badge&logo=github)](https://github.com/rajstories/membridge)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-blueviolet?style=for-the-badge&logo=git)](https://github.com/rajstories/membridge/pulls)
   <img src="https://img.shields.io/badge/CONTEXT-PORTABLE-7c3aed?style=for-the-badge&logo=buffer&logoColor=white&labelColor=0d0d0d"/>
   <img src="https://img.shields.io/badge/AI-AGNOSTIC-0ea5e9?style=for-the-badge&logo=openai&logoColor=white&labelColor=0d0d0d"/>
 </p>
@@ -61,20 +62,25 @@ Context is **trapped** inside each platform. Switch to a new AI? Start from zero
 
 <br/>
 
+
+---
+
+<br/>
+
 ## ⚡ How It Works
 
 <div align="center">
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                                                             │
-│   📝  Answer 7 questions   →   🗂️  Get your context block  │
-│                                                             │
-│   🔌  Install extension    →   💉  Auto-inject anywhere     │
-│                                                             │
-│   ✏️   Edit anytime        →   🔄  Update once, works all   │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   📝  Answer 7 questions  ──▶  🗂️  Get your context block       ║
+║                                                                  ║
+║   🔌  Install extension   ──▶  💉  Auto-inject anywhere         ║
+║                                                                  ║
+║   ✏️   Edit anytime        ──▶  🔄  Update once, works all      ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
 ```
 
 </div>
@@ -94,7 +100,7 @@ Context is **trapped** inside each platform. Switch to a new AI? Start from zero
 - Always    : Hate jargon. Use real examples. Be blunt.
 ```
 
-> Paste this anywhere. ~400 tokens. Every AI instantly *gets you.*
+> 💡 Paste this anywhere. ~400 tokens. Every AI instantly *gets you.*
 
 ---
 
@@ -102,30 +108,46 @@ Context is **trapped** inside each platform. Switch to a new AI? Start from zero
 
 ## 🚀 Getting Started
 
+<details open>
+<summary><b>📦 Option 1 — Clone & Run Locally</b></summary>
+
+<br/>
+
 ```bash
-# clone
-git clone https://github.com/yourusername/membridge
+# 1. Clone the repo
+git clone https://github.com/rajstories/membridge
 cd membridge
 
-# install
+# 2. Install dependencies
 npm install
 
-# run
+# 3. Start the dev server
 npm run dev
 ```
 
-Or use the CLI directly:
+> 🟢 App runs at `http://localhost:3000`
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>⚡ Option 2 — Use the CLI (npx, no install needed)</b></summary>
+
+<br/>
 
 ```bash
-# one-time setup
+# One-time setup — builds your context block
 npx contextify setup
 
-# inject into current chat
+# Inject into current chat
 npx contextify inject
 
-# view your context block
+# View your saved context block
 npx contextify show
 ```
+
+</details>
 
 ---
 
@@ -136,17 +158,19 @@ npx contextify show
 ```
 membridge/
 │
-├── 📁 app/                    # Next.js app router
+├── 📁 app/                      # Next.js App Router
+│   └── page.tsx                 # Main entry point
+│
 ├── 📁 components/
-│   ├── 🧙 Wizard.tsx          # 7-step context builder
-│   └── 📋 PassportOutput.tsx  # copy / download / share
+│   ├── 🧙 Wizard.tsx            # 7-step context builder UI
+│   └── 📋 PassportOutput.tsx    # Copy / Download / Share block
 │
 ├── 📁 lib/
-│   └── 🔑 passport.ts         # schema + prompt generator
+│   └── 🔑 passport.ts           # Schema + prompt generator logic
 │
-├── 📁 extension/              # Chrome / Firefox extension
-│   ├── manifest.json
-│   └── content.js             # auto-inject on AI sites
+├── 📁 extension/                # Browser Extension (Chrome & Firefox)
+│   ├── manifest.json            # Extension config
+│   └── content.js               # Auto-inject on AI sites
 │
 └── 📄 README.md
 ```
@@ -157,20 +181,25 @@ membridge/
 
 ## 🔌 Browser Extension
 
-Install → click icon → **done.** Your context auto-injects into the chat input.
-
 <div align="center">
 
-| Platform | Status |
-|---|---|
-| 🟢 ChatGPT | ✅ Supported |
-| 🟢 Claude | ✅ Supported |
-| 🟢 Gemini | ✅ Supported |
-| 🟡 Perplexity | 🔄 Coming Soon |
-| 🟡 Mistral | 🔄 Coming Soon |
-| ⚪ Any AI | ⚙️ Custom selector support |
+**Install → Click icon → Done.**
+Your context auto-injects into the chat input on every supported AI platform.
+
+<br/>
+
+| Platform | Status | Notes |
+|:---:|:---:|:---|
+| 💬 **ChatGPT** | ✅ Supported | Auto-injects on page load |
+| 🟣 **Claude** | ✅ Supported | Full support |
+| 🔵 **Gemini** | ✅ Supported | Full support |
+| 🟡 **Perplexity** | 🔄 Coming Soon | Help wanted! |
+| 🟠 **Mistral** | 🔄 Coming Soon | Help wanted! |
+| ⚙️ **Any AI** | 🛠️ Custom selector | Add your own in `content.js` |
 
 </div>
+
+> 🙋 **Want to add a platform?** Drop a selector in `/extension/content.js` and open a PR — it's that easy.
 
 ---
 
@@ -179,13 +208,15 @@ Install → click icon → **done.** Your context auto-injects into the chat inp
 ## 🛣️ Roadmap
 
 ```
-  v0.1  ✅  Wizard + context block generator
-  v0.2  🔄  Browser extension — auto-inject
-  v0.3  📦  CLI — npx contextify
-  v0.4  🕓  Context version history
-  v0.5  🔗  Shareable public profile links
-  v1.0  🧩  Plugin API for third-party AI tools
+  ████████████████████  v0.1  ✅  Wizard + context block generator
+  ███████████░░░░░░░░░  v0.2  🔄  Browser extension — auto-inject
+  ██████░░░░░░░░░░░░░░  v0.3  📦  CLI — npx contextify
+  ███░░░░░░░░░░░░░░░░░  v0.4  🕓  Context version history
+  ██░░░░░░░░░░░░░░░░░░  v0.5  🔗  Shareable public profile links
+  █░░░░░░░░░░░░░░░░░░░  v1.0  🧩  Plugin API for third-party AI tools
 ```
+
+> 📌 Want to move something up the roadmap? [Open an issue](https://github.com/rajstories/membridge/issues) — votes count.
 
 ---
 
@@ -193,20 +224,42 @@ Install → click icon → **done.** Your context auto-injects into the chat inp
 
 ## 🤝 Contributing
 
-100% open source. Built in public. Everyone welcome.
+<div align="center">
+
+**100% open source. Built in public. Everyone welcome.**
+No gatekeeping. No CLA. Just ship.
+
+</div>
+
+<br/>
 
 ```bash
-# fork → clone → branch → PR
+# 1. Fork this repo
+# 2. Clone your fork
+git clone https://github.com/<your-username>/membridge
+
+# 3. Create a feature branch
 git checkout -b feature/your-idea
+
+# 4. Commit your changes
 git commit -m "add: your idea here"
+
+# 5. Push and open a PR 🚀
 git push origin feature/your-idea
 ```
 
-- 🐛 Found a bug? → [Open an issue](https://github.com/yourusername/membridge/issues)
-- 💡 Have an idea? → [Start a discussion](https://github.com/yourusername/membridge/discussions)
-- 🔌 Adding a platform? → Add a selector in `/extension/content.js`
+<br/>
 
-No gatekeeping. No CLA. Just ship.
+<div align="center">
+
+| What | How |
+|:---:|:---|
+| 🐛 Found a bug | [Open an issue](https://github.com/rajstories/membridge/issues) |
+| 💡 Have an idea | [Start a discussion](https://github.com/rajstories/membridge/discussions) |
+| 🔌 Adding a platform | Add a selector in `/extension/content.js` |
+| ✨ Improve the UI | Pick any open issue and go wild |
+
+</div>
 
 ---
 
@@ -216,13 +269,21 @@ No gatekeeping. No CLA. Just ship.
 
 <div align="center">
 
-> *AI tools will keep changing.*
-> *New models. New platforms. New interfaces.*
->
-> *But who you are — how you think, what you build, how you communicate —*
-> *that's **yours.** It shouldn't live inside any company's servers.*
->
-> **MemBridge keeps your context with you. Always.**
+```
+  ╭─────────────────────────────────────────────────────────────╮
+  │                                                             │
+  │   AI tools will keep changing.                             │
+  │   New models. New platforms. New interfaces.               │
+  │                                                             │
+  │   But who you are — how you think, what you build,         │
+  │   how you communicate — that's YOURS.                      │
+  │   It shouldn't live inside any company's servers.          │
+  │                                                             │
+  │          MemBridge keeps your context with you.            │
+  │                        Always.                             │
+  │                                                             │
+  ╰─────────────────────────────────────────────────────────────╯
+```
 
 </div>
 
@@ -240,6 +301,7 @@ No gatekeeping. No CLA. Just ship.
 
 <br/>
 
-*contextify yourself.*
+[![Twitter](https://img.shields.io/badge/Share%20on-Twitter-1da1f2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/intent/tweet?text=MemBridge%20keeps%20your%20AI%20context%20with%20you%20—%20always.%20Check%20it%20out!%20🔗%20https://github.com/rajstories/membridge)
+[![LinkedIn](https://img.shields.io/badge/Share%20on-LinkedIn-0077b5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/rajstories/membridge)
 
 </div>
